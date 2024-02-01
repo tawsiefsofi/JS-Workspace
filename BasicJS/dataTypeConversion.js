@@ -9,3 +9,4 @@ console.log(typeof (score)); // Output: string);
 
 let valueInNumber = Number(score);
 console.log(typeof (valueInNumber)); // Output: number
+console.log(valueInNumber); //Output: NaN
