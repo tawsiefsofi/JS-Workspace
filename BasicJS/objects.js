@@ -52,3 +52,74 @@ jsUser.greetingTwo = function(){
 }
 console.log(jsUser.greeting());
 console.log(jsUser.greetingTwo());
+
+
+//Singleton Object
+
+const uberUser = new Object()
+console.log(uberUser);
+
+// Non-singleton Object
+
+const olaUser = {}
+olaUser.id = "123abc"
+olaUser.name = "Rahil"
+olaUser.isLoggedIn = false
+
+// Object inside object
+
+const regularUser = {
+    email: "rahil@gmail.com",
+    fullName: {
+        userFullname:{
+            firstName:"Tawsief",
+            lastName: "Sofi"
+        }
+    }    
+}
+console.log(regularUser.fullName);
+console.log(regularUser.fullName.userFullname.firstName);
+
+// Merging OBJECTS together
+
+const obj1 = {1:"a",2:"b"}
+const obj2 = {3:"a",4:"b"}
+
+const obj3 = {obj1,obj2}
+console.log(obj3);
+
+const obj4 = Object.assign({},obj1,obj2)
+
+const obj5 = {...obj1,...obj2}
+
+
+const users = [
+    {
+        id:12,
+        email:"tawsief@gmail.com"
+    },
+    {
+        id:12,
+        email:"tawsief@gmail.com"
+    },
+    {
+        id:12,
+        email:"tawsief@gmail.com"
+    },
+    {
+        id:12,
+        email:"tawsief@gmail.com"
+    },
+    {
+        id:12,
+        email:"tawsief@gmail.com"
+    }
+]
+
+users[1].email
+
+console.log(Object.keys(uberUser));
+console.log(Object.values(uberUser));
+console.log(Object.entries(uberUser));
+
+console.log(uberUser.hasOwnProperty('isLoggedIn'));
