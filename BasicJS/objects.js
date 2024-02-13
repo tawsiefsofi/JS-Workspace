@@ -123,3 +123,20 @@ console.log(Object.values(uberUser));
 console.log(Object.entries(uberUser));
 
 console.log(uberUser.hasOwnProperty('isLoggedIn'));
+
+// Destructure 
+
+const course = {
+    courseName: "JS-chai aur code",
+    price:"999",
+    courseInstructor: "hitesh"
+    }
+
+// course.courseInstructor 
+
+const{courseInstructor} = course
+console.log(courseInstructor); // Output: hitesh
+
+// Another way
+const{courseInstructor:instructor} = course
+console.log(instructor); // Output: hitesh
