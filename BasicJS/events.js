@@ -24,7 +24,8 @@
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
-   
+
+
     
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
@@ -49,3 +50,12 @@ const sayHitesh = function(){
         clearTimeout(changeMe)
         console.log("STOPPED")
     })
+
+// Date event
+const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    const intervalId = setInterval(sayDate, 1000, "hi")
+
+    clearInterval(intervalId)
